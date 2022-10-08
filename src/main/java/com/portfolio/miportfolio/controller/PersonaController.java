@@ -1,6 +1,6 @@
 package com.portfolio.miportfolio.controller;
 
-import com.portfolio.miportfolio.iUsuarioService.IPersonaService;
+import com.portfolio.miportfolio.iService.IPersonaService;
 import com.portfolio.miportfolio.model.Persona;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +49,8 @@ public class PersonaController {
             @RequestParam("profesion") String nuevoProfesion,
             @RequestParam("acerca_de") String nuevoAcerca_de,
             @RequestParam("direccion") String nuevoDireccion,
+            @RequestParam("linkedin") String nuevoLinkedin,
+            @RequestParam("github") String nuevoGithub,
             @RequestParam("foto") String nuevoFoto) {
         Persona pers = interPersona.findPersona(id);
 
@@ -58,6 +60,8 @@ public class PersonaController {
         pers.setAcerca_de(nuevoAcerca_de);
         pers.setDireccion(nuevoDireccion);
         pers.setFoto(nuevoFoto);
+        pers.setLinkedin(nuevoLinkedin);
+        pers.setGithub(nuevoGithub);
         interPersona.savePersona(pers);
         return pers;
     }

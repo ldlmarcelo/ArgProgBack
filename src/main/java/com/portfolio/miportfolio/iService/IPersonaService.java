@@ -1,4 +1,4 @@
-package com.portfolio.miportfolio.iUsuarioService;
+package com.portfolio.miportfolio.iService;
 
 import com.portfolio.miportfolio.model.Persona;
 import java.util.List;

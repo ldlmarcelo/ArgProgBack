@@ -1,6 +1,6 @@
 package com.portfolio.miportfolio.controller;
 
-import com.portfolio.miportfolio.iUsuarioService.IExpLabService;
+import com.portfolio.miportfolio.iService.IExpLabService;
 import com.portfolio.miportfolio.model.ExpLab;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

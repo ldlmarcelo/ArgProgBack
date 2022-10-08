@@ -1,6 +1,6 @@
 package com.portfolio.miportfolio.service;
 
-import com.portfolio.miportfolio.iUsuarioService.IExpLabService;
+import com.portfolio.miportfolio.iService.IExpLabService;
 import com.portfolio.miportfolio.model.ExpLab;
 import com.portfolio.miportfolio.repository.ExpLabRepository;
 import java.util.List;
