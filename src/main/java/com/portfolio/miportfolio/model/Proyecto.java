@@ -14,7 +14,7 @@ public class Proyecto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-
+    private long id;
     private String titulo;
     private String subtitulo;
     private String detalle;
