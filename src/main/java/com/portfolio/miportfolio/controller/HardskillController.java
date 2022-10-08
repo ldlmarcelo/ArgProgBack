@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.apache.commons.lang3.StringUtils;
 
 @RestController
-@CrossOrigin(origins = "https://argprogfront1.web.app")
+@CrossOrigin(origins = "https://argprogfront1.web.app/")
 public class HardskillController {
     @Autowired
     private IHardskillService iHardskillService;

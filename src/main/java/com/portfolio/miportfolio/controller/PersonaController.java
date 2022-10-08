@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "https://argprogfront1.web.app")
+@CrossOrigin(origins = "https://argprogfront1.web.app/")
 public class PersonaController {
 
     @Autowired
