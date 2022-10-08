@@ -35,4 +35,16 @@ public class ExpLabService implements IExpLabService {
         return pers;
     }
 
+    @Override
+    public ExpLab modificarExperiencia(ExpLab experiencia) {
+        return expLabRepository.save(experiencia);
+    }
+    
+    
+
+
+
+
+  
+
 }

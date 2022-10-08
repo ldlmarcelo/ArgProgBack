@@ -10,16 +10,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class ExpLab {
+public class Educacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    private String logo;
-    private String empresa;
-    private String puesto;
     private String fecha;
-    private String descripcion;
-    
-       
+    private String institucion;    
+    private String titulo;
+
 }

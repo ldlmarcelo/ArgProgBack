@@ -33,6 +33,7 @@ public class PersonaController {
         interPersona.savePersona(pers);
         return "La persona fue creada correctamente";
     }
+
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/persona/borrar/{id}")
     public String deletePersona(@PathVariable Long id) {
@@ -40,9 +41,9 @@ public class PersonaController {
         interPersona.deletePersona(id);
         return "La persona fue eliminada correctamente";
     }
+
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("persona/editar/{id}")
-
     public Persona editPersona(@PathVariable Long id,
             @RequestParam("nombre") String nuevoNombre,
             @RequestParam("apellido") String nuevoApellido,
@@ -52,6 +53,7 @@ public class PersonaController {
             @RequestParam("linkedin") String nuevoLinkedin,
             @RequestParam("github") String nuevoGithub,
             @RequestParam("foto") String nuevoFoto) {
+        
         Persona pers = interPersona.findPersona(id);
 
         pers.setNombre(nuevoNombre);
