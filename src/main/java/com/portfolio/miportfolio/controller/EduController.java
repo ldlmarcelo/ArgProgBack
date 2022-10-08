@@ -36,11 +36,10 @@ public class EduController {
         if (StringUtils.isBlank(edu.getInstitucion())) {
             return new ResponseEntity(new Mensaje("incluir Institucion"), HttpStatus.BAD_REQUEST);
         }
-        
-          if (StringUtils.isBlank(edu.getFecha())) {
+
+        if (StringUtils.isBlank(edu.getFecha())) {
             return new ResponseEntity(new Mensaje("incluir fecha"), HttpStatus.BAD_REQUEST);
         }
-
 
         if (StringUtils.isBlank(edu.getTitulo())) {
             return new ResponseEntity(new Mensaje("incluir titulo"), HttpStatus.BAD_REQUEST);
@@ -55,21 +54,18 @@ public class EduController {
 
         interEdu.deleteEdu(id);
         return new ResponseEntity(new Mensaje("Educación borrada"), HttpStatus.OK);
-
     }
-    
-       @PutMapping("/Educacion/modificar")
+
+    @PutMapping("/Educacion/modificar")
     public ResponseEntity<Educacion> modificarEducacion(@RequestBody Educacion edu) {
         Educacion educacionModificada = interEdu.modificarEdu(edu);
         return new ResponseEntity<>(educacionModificada, HttpStatus.OK);
     }
-    
-        @GetMapping("/Educacion/buscar/{id}")
+
+    @GetMapping("/Educacion/buscar/{id}")
     public ResponseEntity<Educacion> buscarEducacion(@PathVariable("id") Long id) {
         Educacion educacionBuscada = interEdu.findEdu(id);
         return new ResponseEntity<>(educacionBuscada, HttpStatus.OK);
     }
-    
-    
-}
 
+}
